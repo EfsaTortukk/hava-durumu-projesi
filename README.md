@@ -1,40 +1,51 @@
-# Hava Durumu NFT Projesi
+# 🌤️ Hava Durumu Projesi
 
-Bu proje, OpenWeather API'sini kullanarak hava durumu verilerini alır ve bu verilere dayanarak bir Ethereum smart contract'i kullanarak NFT (Non-Fungible Token) oluşturur. Hava durumu koşullarına bağlı olarak NFT oluşturulması veya ödeme işlemlerinin gerçekleştirilmesi sağlanmıştır.
+Bu Python projesi, kullanıcıdan bir şehir adı alarak **OpenWeatherMap API** üzerinden o şehrin güncel hava durumu bilgilerini terminalde göstermeyi amaçlar.
 
-## Başlangıç
+## 🔍 Özellikler
 
-Bu projeyi klonlayarak veya indirerek başlayabilirsiniz.
+- Şehir ismine göre anlık hava durumu bilgisi alma
+- Açıklayıcı terminal çıktısı
+- Hata kontrolü (geçersiz şehir adı gibi durumlar için uyarı)
 
+## 🛠️ Kullanılan Teknolojiler
+
+- Python 3
+- `requests` kütüphanesi
+- [OpenWeatherMap API](https://openweathermap.org/)
+
+## 🚀 Kurulum ve Çalıştırma
+
+1. **Depoyu klonla:**
 ```bash
-git clone https://github.com/kullanici/hava-durumu-nft-projesi.git
-```
+git clone https://github.com/EfsaTortukk/hava-durumu-projesi.git
+cd hava-durumu-projesi
+Gerekli paketi kur:
 
-## Kurulum
-
-Projeyi klonladıktan sonra, projenin kök dizinine gidin ve gerekli bağımlılıkları yükleyin.
-
+2. **Gerekli paketleri kur:**
 ```bash
-cd hava-durumu-nft-projesi
-npm install
-```
+pip install requests
 
-## Kullanım
-
-1. OpenWeather API anahtarını [buradan](https://openweathermap.org/api) alın.
-2. `index.js` dosyasındaki `API_KEY` değişkenine API anahtarınızı ekleyin.
-3. Ganache veya benzeri bir Ethereum simülasyon ağını başlatın.
-4. Smart contract'i deploy etmek için Truffle kullanarak gerekli adımları takip edin.
-5. `index.js` dosyasını çalıştırarak NFT oluşturma işlemini başlatın.
-
+3. **API Anahtarını ayarla:**
+hava_durumu.py dosyasındaki api_key değişkenine kendi OpenWeatherMap API anahtarınızı girin:
 ```bash
-node index.js
-```
+api_key = "BURAYA_KENDİ_API_ANAHTARINIZI_YAZIN"
 
-## Katkıda Bulunma
 
-Herhangi bir hata veya sorun bulursanız, lütfen bir [issue](https://github.com/kullanici/hava-durumu-nft-projesi/issues) açın. Katkıda bulunmak isterseniz, lütfen bir [pull request](https://github.com/kullanici/hava-durumu-nft-projesi/pulls) gönderin.
+4. **Programı çalıştır:**
+```bash
+python hava_durumu.py
 
-## Lisans
 
-Bu proje MIT lisansı altında lisanslanmıştır. Daha fazla bilgi için [LICENSE](LICENSE) dosyasına bakın.
+## 📝 Örnek Çıktı
+makefile
+Kopyala
+Şehir: Istanbul
+Sıcaklık: 19.4°C
+Hava Durumu: Açık
+Nem: 47%
+
+## 💡 Notlar
+API anahtarınızı OpenWeatherMap sitesinden ücretsiz olarak alabilirsiniz.
+
+Türkçe karakterli şehir adlarını destekler (örneğin: İzmir, Şanlıurfa, Çanakkale).

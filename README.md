@@ -20,11 +20,12 @@ Bu Python projesi, kullanıcıdan bir şehir adı alarak **OpenWeatherMap API** 
 ```bash
 git clone https://github.com/EfsaTortukk/hava-durumu-projesi.git
 cd hava-durumu-projesi
-Gerekli paketi kur:
+```bash
 
-2. **Gerekli paketleri kur:**
+2. **Gerekli paketi kur:**
 ```bash
 pip install requests
+
 
 3. **API Anahtarını ayarla:**
 hava_durumu.py dosyasındaki api_key değişkenine kendi OpenWeatherMap API anahtarınızı girin:
